@@ -1,7 +1,5 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useRef } from "react";
 import Icon from "./components/Icon";
 import { TECHSTACK } from "./data/TechStack";
@@ -10,49 +8,49 @@ import SectionTitle from "./SectionTitle";
 const TechstackSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const slideUpEl = containerRef.current?.querySelectorAll(".slide-up");
+  // useGSAP(
+  //   () => {
+  //     const slideUpEl = containerRef.current?.querySelectorAll(".slide-up");
 
-      if (!slideUpEl?.length) return;
+  //     if (!slideUpEl?.length) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom 80%",
-          scrub: 0.5,
-        },
-      });
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: containerRef.current,
+  //         start: "top 80%",
+  //         end: "bottom 80%",
+  //         scrub: 0.5,
+  //       },
+  //     });
 
-      tl.from(".slide-up", {
-        opacity: 0,
-        y: 40,
-        ease: "none",
-        stagger: 0.4,
-      });
-    },
-    { scope: containerRef }
-  );
+  //     tl.from(".slide-up", {
+  //       opacity: 0,
+  //       y: 40,
+  //       ease: "none",
+  //       stagger: 0.4,
+  //     });
+  //   },
+  //   { scope: containerRef }
+  // );
 
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom 50%",
-          end: "bottom 10%",
-          scrub: 1,
-        },
-      });
+  // useGSAP(
+  //   () => {
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: containerRef.current,
+  //         start: "bottom 50%",
+  //         end: "bottom 10%",
+  //         scrub: 1,
+  //       },
+  //     });
 
-      tl.to(containerRef.current, {
-        y: -150,
-        opacity: 0,
-      });
-    },
-    { scope: containerRef }
-  );
+  //     tl.to(containerRef.current, {
+  //       y: -150,
+  //       opacity: 0,
+  //     });
+  //   },
+  //   { scope: containerRef }
+  // );
 
   return (
     <section
@@ -67,7 +65,7 @@ const TechstackSection = () => {
             key={key}
             className="flex flex-col md:flex-row justify-between gap-4"
           >
-            <h5 className=" slide-up text-4xl md:text-5xl font-anton uppercase pb-2">
+            <h5 className="text-heading slide-up text-4xl md:text-5xl font-anton uppercase pb-2">
               {key}
             </h5>
             <div className="md:w-[60%] flex flex-wrap gap-x-8 gap-y-6">
@@ -76,7 +74,7 @@ const TechstackSection = () => {
                   key={iconName}
                   name={iconName}
                   svgClassNames="w-8 h-8 md:w-10 md:h-10"
-                  parentClassNames="slide-up gap-2 text-xl md:text-2xl capitalize"
+                  parentClassNames="text-text slide-up gap-2 text-xl md:text-2xl capitalize"
                 >
                   {label}
                 </Icon>
