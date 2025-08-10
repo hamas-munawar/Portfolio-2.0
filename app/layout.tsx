@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { Anton, Roboto } from "next/font/google";
 import "./globals.css";
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-anton",
+});
+
+const roboto = Roboto({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Hamas - Portfolio",
@@ -14,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${anton.variable} ${roboto.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
