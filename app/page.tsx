@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main className="xl:px-20"></main>;
+  return <main className=" flex flex-col gap-16 xl:px-20"></main>;
 }
