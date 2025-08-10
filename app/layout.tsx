@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Roboto } from "next/font/google";
+import ParticleBackground from "./components/ParticlesBackground";
 import "./globals.css";
 
 const anton = Anton({
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10 bg-black/80`}
       >
+        <ParticleBackground />
         {children}
       </body>
     </html>
