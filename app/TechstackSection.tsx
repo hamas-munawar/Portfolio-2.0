@@ -55,7 +55,7 @@ const TechstackSection = () => {
   return (
     <section
       id="tect-stack"
-      className="min-h-screen grid place-content-center gap-6  hover:cursor-default select-none py-8"
+      className="min-h-screen grid place-content-center gap-6  hover:cursor-default select-none py-8 text-white-whisper"
       ref={containerRef}
     >
       <SectionTitle title="My Stack" />
@@ -65,7 +65,7 @@ const TechstackSection = () => {
             key={key}
             className="flex flex-col md:flex-row justify-between gap-4"
           >
-            <h5 className="text-heading slide-up text-4xl md:text-5xl font-anton uppercase pb-2">
+            <h5 className="text-white-cool slide-up text-4xl md:text-5xl font-anton uppercase pb-2">
               {key}
             </h5>
             <div className="md:w-[60%] flex flex-wrap gap-x-8 gap-y-6">
