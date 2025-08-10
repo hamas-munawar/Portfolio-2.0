@@ -27,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${roboto.variable} antialiased`}>
+      <body
+        className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10`}
+      >
         {children}
       </body>
     </html>
