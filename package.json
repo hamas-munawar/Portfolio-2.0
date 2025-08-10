@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-icon-types": "node scripts/generate-icon-types.js",
+    "predev": "bun run generate-icon-types",
+    "prebuild": "bun run generate-icon-types"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
