@@ -20,7 +20,7 @@ const Icon: React.FC<IconProps> = ({
   return (
     <div className={`flex items-center ${parentClassNames}`}>
       <Image
-        src={`/assets/Icons/${name}.svg`}
+        src={`/icons/${name}.svg`}
         alt={`${name} icon`}
         width={parseInt(size)}
         height={parseInt(size)}
