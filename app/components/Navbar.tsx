@@ -50,11 +50,11 @@ const Navbar = () => {
         >
           <div className="flex flex-col justify-center items-center h-full w-full gap-2">
             <span
-              className={`block w-6 h-1 rounded-sm bg-heading transition-all duration-300 ease-out group-hover:scale-x-125 group-hover:bg-brand
+              className={`block w-6 h-1 rounded-sm bg-white-whisper transition-all duration-300 ease-out group-hover:scale-x-125 group-hover:bg-brand
               ${menu ? "translate-y-[0.3725rem] rotate-45" : ""}`}
             ></span>
             <span
-              className={`block w-6 h-1 rounded-sm bg-heading transition-all duration-300 ease-out group-hover:scale-x-125 group-hover:bg-brand
+              className={`block w-6 h-1 rounded-sm bg-white-whisper transition-all duration-300 ease-out group-hover:scale-x-125 group-hover:bg-brand
               ${menu ? "-translate-y-[0.3725rem] -rotate-45" : ""}`}
             ></span>
           </div>
@@ -69,15 +69,15 @@ const Navbar = () => {
           {/* Overlay with a semi-transparent background */}
           <div
             onClick={() => setMenu(false)}
-            className="absolute inset-0 bg-black/90"
+            className="absolute inset-0 bg-black/50"
           ></div>
 
           {/* Mobile menu content */}
           <div className="mobile-menu absolute top-0 right-0 translate-x-full overflow-hidden rounded-[50%]">
-            <div className="w-screen sm:w-auto h-screen bg-background flex flex-col items-center justify-center px-30">
+            <div className="w-screen sm:w-auto h-screen bg-gray-gunmetal flex flex-col items-center justify-center px-30">
               <div className="flex flex-col md:flex-row gap-16">
                 <div className="flex flex-col gap-5">
-                  <h4 className="text-xl tracking-widest font-semibold text-text uppercase">
+                  <h4 className="text-xl tracking-widest font-semibold text-white-ghost uppercase">
                     Social
                   </h4>
                   <ul className="flex flex-col gap-4">
@@ -85,7 +85,7 @@ const Navbar = () => {
                       <li key={label}>
                         <Link
                           href={href}
-                          className="text-xl text-heading hover:underline"
+                          className="text-xl text-white-whisper hover:underline"
                         >
                           {label}
                         </Link>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex flex-col gap-5">
-                  <h4 className="text-xl tracking-widest font-semibold text-text uppercase">
+                  <h4 className="text-xl tracking-widest font-semibold text-white-ghost uppercase">
                     Menu
                   </h4>
                   <ul className="flex flex-col gap-4">
@@ -106,7 +106,7 @@ const Navbar = () => {
                       >
                         <Link
                           href={href}
-                          className="text-xl text-heading ml-10"
+                          className="text-xl text-white-whisper ml-10"
                         >
                           <span
                             className={`origin-left transition-all duration-300 ease-out absolute left-0 translate-1 h-4 w-4 rounded-full group-hover:scale-200 ${colorClass}`}
@@ -122,12 +122,12 @@ const Navbar = () => {
               </div>
 
               <div className="absolute bottom-5 text-left mx-16">
-                <h4 className="text-md tracking-widest font-semibold text-text uppercase">
+                <h4 className="text-md tracking-widest font-semibold text-white-ghost uppercase">
                   Get in Touch
                 </h4>
                 <Link
                   href="mailto:muhammadhamasmunawar@gmail.com"
-                  className="text-heading text-md hover:underline"
+                  className="text-white-whisper text-md hover:underline"
                 >
                   muhammadhamasmunawar@gmail.com
                 </Link>
