@@ -50,7 +50,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="min-h-screen grid place-content-center gap-6 md:gap-12 xl:px-20"
+      className="min-h-screen grid place-content-center gap-6 md:gap-12"
       ref={container}
     >
       <p className="font-thin text-2xl sm:text-4xl md:text-5xl md:pr-12 text-white-ghost slide-up-and-fade">
