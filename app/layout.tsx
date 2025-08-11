@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Roboto } from "next/font/google";
+import Footer from "./components/Footer";
 import ParticleBackground from "./components/ParticlesBackground";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <ParticleBackground />
         {children}
+        <Footer />
       </body>
     </html>
   );
