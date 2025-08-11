@@ -1,4 +1,4 @@
-import { PROJECT } from "../types/Project";
+import { PROJECT } from "../types/project";
 
 export const PROJECTS: PROJECT[] = [
   {
@@ -9,12 +9,12 @@ export const PROJECTS: PROJECT[] = [
     description:
       "An e-commerce website for a clothing brand, Kumo, featuring a new winter collection, trending products, client reviews, and a blog/updates section. The site has a clean, modern design with a focus on product display.",
     techStack: ["HTML", "Tailwind CSS", "JavaScript"],
-    thumbnail: "/assets/Images/projects/thumbnails/kumo.jpeg",
+    thumbnail: "/images/projects/thumbnails/kumo.jpeg",
     images: [
-      "/assets/Images/projects/images/kumo-1.png",
-      "/assets/Images/projects/images/kumo-2.png",
-      "/assets/Images/projects/images/kumo-3.png",
-      "/assets/Images/projects/images/kumo-4.png",
+      "/images/projects/images/kumo-1.png",
+      "/images/projects/images/kumo-2.png",
+      "/images/projects/images/kumo-3.png",
+      "/images/projects/images/kumo-4.png",
     ],
     features: [
       "Product catalog with trending items",
@@ -38,13 +38,13 @@ export const PROJECTS: PROJECT[] = [
     description:
       "An e-commerce website for a clothing brand, Shelvet. The site showcases trending, summer, and winter collections with smooth animations and a clean, modern aesthetic.",
     techStack: ["HTML", "CSS", "GSAP", "JavaScript"],
-    thumbnail: "/assets/Images/projects/thumbnails/shelvet.jpeg",
+    thumbnail: "/images/projects/thumbnails/shelvet.jpeg",
     images: [
-      "/assets/Images/projects/images/sehlvet-1.png",
-      "/assets/Images/projects/images/sehlvet-2.png",
-      "/assets/Images/projects/images/sehlvet-3.png",
-      "/assets/Images/projects/images/sehlvet-4.png",
-      "/assets/Images/projects/images/sehlvet-5.png",
+      "/images/projects/images/sehlvet-1.png",
+      "/images/projects/images/sehlvet-2.png",
+      "/images/projects/images/sehlvet-3.png",
+      "/images/projects/images/sehlvet-4.png",
+      "/images/projects/images/sehlvet-5.png",
     ],
     features: [
       "Trending, Summer, and Winter product collections",
@@ -67,12 +67,12 @@ export const PROJECTS: PROJECT[] = [
     description:
       "A web application for Browse and discovering video games. Users can filter games by genre, sort by relevance or other criteria, and see details like platform and ratings. The site features a clean, dark-themed UI.",
     techStack: ["React", "Chakra UI", "JavaScript", "API"],
-    thumbnail: "/assets/Images/projects/thumbnails/game-hub.jpeg",
+    thumbnail: "/images/projects/thumbnails/game-hub.jpeg",
     images: [
-      "/assets/Images/projects/images/game-hub-1.png",
-      "/assets/Images/projects/images/game-hub-2.png",
-      "/assets/Images/projects/images/game-hub-3.png",
-      "/assets/Images/projects/images/game-hub-4.png",
+      "/images/projects/images/game-hub-1.png",
+      "/images/projects/images/game-hub-2.png",
+      "/images/projects/images/game-hub-3.png",
+      "/images/projects/images/game-hub-4.png",
     ],
     features: [
       "Game list display with cards for each game",
@@ -96,16 +96,16 @@ export const PROJECTS: PROJECT[] = [
     description:
       "A static e-commerce store with a focus on product display and a clean layout. The project is built using fundamental web technologies.",
     techStack: ["HTML", "CSS"],
-    thumbnail: "/assets/Images/projects/thumbnails/exclusive.png",
+    thumbnail: "/images/projects/thumbnails/exclusive.png",
     images: [
-      "/assets/Images/projects/images/exclusive-1.png",
-      "/assets/Images/projects/images/exclusive-2.png",
-      "/assets/Images/projects/images/exclusive-3.png",
-      "/assets/Images/projects/images/exclusive-4.png",
-      "/assets/Images/projects/images/exclusive-5.png",
-      "/assets/Images/projects/images/exclusive-6.png",
-      "/assets/Images/projects/images/exclusive-7.png",
-      "/assets/Images/projects/images/exclusive-8.png",
+      "/images/projects/images/exclusive-1.png",
+      "/images/projects/images/exclusive-2.png",
+      "/images/projects/images/exclusive-3.png",
+      "/images/projects/images/exclusive-4.png",
+      "/images/projects/images/exclusive-5.png",
+      "/images/projects/images/exclusive-6.png",
+      "/images/projects/images/exclusive-7.png",
+      "/images/projects/images/exclusive-8.png",
     ],
     features: [
       "Product catalog display",
@@ -126,14 +126,14 @@ export const PROJECTS: PROJECT[] = [
     description:
       "A full-stack web application designed for tracking and managing project issues. It allows users to create, view, and manage issues, with a dashboard for quick insights.",
     techStack: ["Next.js", "MySQL", "Prisma", "Radix UI", "Tailwind CSS"],
-    thumbnail: "/assets/Images/projects/thumbnails/issue-tracker.png",
+    thumbnail: "/images/projects/thumbnails/issue-tracker.png",
     images: [
-      "/assets/Images/projects/images/issue-tracker-1.png",
-      "/assets/Images/projects/images/issue-tracker-2.png",
-      "/assets/Images/projects/images/issue-tracker-3.png",
-      "/assets/Images/projects/images/issue-tracker-4.png",
-      "/assets/Images/projects/images/issue-tracker-5.png",
-      "/assets/Images/projects/images/issue-tracker-6.png",
+      "/images/projects/images/issue-tracker-1.png",
+      "/images/projects/images/issue-tracker-2.png",
+      "/images/projects/images/issue-tracker-3.png",
+      "/images/projects/images/issue-tracker-4.png",
+      "/images/projects/images/issue-tracker-5.png",
+      "/images/projects/images/issue-tracker-6.png",
     ],
     features: [
       "Issue creation and management",
