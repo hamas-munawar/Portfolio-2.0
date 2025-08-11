@@ -1,9 +1,10 @@
 "use client";
 import { PROJECTS } from "@/app/data/Projects";
+import { useParams } from "next/navigation";
 import { FaGithub, FaLink } from "react-icons/fa";
 
-const ProjectDetailPage = ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+const ProjectDetailPage = () => {
+  const { slug } = useParams();
 
   const project = PROJECTS.find((project) => project.slug === slug);
 
