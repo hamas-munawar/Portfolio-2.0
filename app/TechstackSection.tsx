@@ -1,65 +1,70 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import Icon from "./components/Icon";
 import { TECHSTACK } from "./data/TechStack";
 import SectionTitle from "./SectionTitle";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const TechstackSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useGSAP(
-  //   () => {
-  //     const slideUpEl = containerRef.current?.querySelectorAll(".slide-up");
+  useGSAP(
+    () => {
+      const slideUpEl = containerRef.current?.querySelectorAll(".slide-up");
 
-  //     if (!slideUpEl?.length) return;
+      if (!slideUpEl?.length) return;
 
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: containerRef.current,
-  //         start: "top 80%",
-  //         end: "bottom 80%",
-  //         scrub: 0.5,
-  //       },
-  //     });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 60%",
+          end: "bottom 80%",
+          scrub: 0.5,
+        },
+      });
 
-  //     tl.from(".slide-up", {
-  //       opacity: 0,
-  //       y: 40,
-  //       ease: "none",
-  //       stagger: 0.4,
-  //     });
-  //   },
-  //   { scope: containerRef }
-  // );
+      tl.from(".slide-up", {
+        opacity: 0,
+        y: 40,
+        ease: "none",
+        stagger: 0.4,
+      });
+    },
+    { scope: containerRef }
+  );
 
-  // useGSAP(
-  //   () => {
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: containerRef.current,
-  //         start: "bottom 50%",
-  //         end: "bottom 10%",
-  //         scrub: 1,
-  //       },
-  //     });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "bottom 50%",
+          end: "bottom 10%",
+          scrub: 1,
+        },
+      });
 
-  //     tl.to(containerRef.current, {
-  //       y: -150,
-  //       opacity: 0,
-  //     });
-  //   },
-  //   { scope: containerRef }
-  // );
+      tl.to(containerRef.current, {
+        y: -150,
+        opacity: 0,
+      });
+    },
+    { scope: containerRef }
+  );
 
   return (
     <section
       id="tect-stack"
-      className="min-h-screen grid place-content-center gap-6 select-none py-8"
+      className="slide-up min-h-screen grid place-content-center gap-6 select-none py-8"
       ref={containerRef}
     >
       <SectionTitle title="My Stack" />
-      <div className="flex flex-col gap-16">
+      <div className=" flex flex-col gap-16">
         {Object.keys(TECHSTACK).map((key) => (
           <div
             key={key}
