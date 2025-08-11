@@ -11,7 +11,7 @@ const anton = Anton({
 });
 
 const roboto = Roboto({
-  weight: ["400", "700", "900"],
+  weight: ["100", "400", "700", "900"],
   subsets: ["latin"],
   variable: "--font-roboto",
 });
