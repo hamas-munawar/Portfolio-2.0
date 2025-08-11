@@ -55,7 +55,7 @@ const TechstackSection = () => {
   return (
     <section
       id="tect-stack"
-      className="min-h-screen grid place-content-center gap-6  hover:cursor-default select-none py-8 text-white-whisper"
+      className="min-h-screen grid place-content-center gap-6 select-none py-8 text-white-whisper"
       ref={containerRef}
     >
       <SectionTitle title="My Stack" />

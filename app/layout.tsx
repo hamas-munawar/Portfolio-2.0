@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10 bg-black/80 text-white-whisper`}
+        className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10 bg-black/80 text-white-whisper select-none cursor-default font-roboto`}
       >
         <ParticleBackground />
         {children}
