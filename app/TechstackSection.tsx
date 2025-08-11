@@ -22,7 +22,7 @@ const TechstackSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 60%",
+          start: "top 80%",
           end: "bottom 80%",
           scrub: 0.5,
         },
@@ -61,16 +61,19 @@ const TechstackSection = () => {
     <section
       id="tect-stack"
       className="slide-up min-h-screen grid place-content-center gap-6 select-none py-8"
-      ref={containerRef}
     >
       <SectionTitle title="My Stack" />
-      <div className=" flex flex-col gap-16">
-        {Object.keys(TECHSTACK).map((key) => (
+      <div className=" flex flex-col gap-16" ref={containerRef}>
+        {Object.keys(TECHSTACK).map((key, index) => (
           <div
             key={key}
-            className="flex flex-col md:flex-row justify-between gap-4"
+            className="slide-up flex flex-col md:flex-row justify-between gap-4"
           >
-            <h5 className="text-white-cool slide-up text-4xl md:text-5xl font-anton uppercase pb-2">
+            <h5
+              className={`text-white-cool ${
+                index !== 0 && "slide-up"
+              } text-4xl md:text-5xl font-anton uppercase pb-2`}
+            >
               {key}
             </h5>
             <div className="md:w-[60%] flex flex-wrap gap-x-8 gap-y-6">
