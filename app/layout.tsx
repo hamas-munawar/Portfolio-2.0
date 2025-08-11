@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Roboto } from "next/font/google";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import ParticleBackground from "./components/ParticlesBackground";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10 bg-black/80 text-white-whisper select-none cursor-default font-roboto`}
       >
         <ParticleBackground />
+        <Navbar />
         {children}
         <Footer />
       </body>
