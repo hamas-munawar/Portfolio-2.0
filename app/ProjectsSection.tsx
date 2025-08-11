@@ -1,16 +1,42 @@
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { PROJECTS } from "./data/Projects";
 import SectionTitle from "./SectionTitle";
 
 const ProjectsSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top bottom",
+          end: "top 80%",
+          toggleActions: "restart none none reverse",
+          scrub: 1,
+        },
+      });
+
+      tl.from(containerRef.current, {
+        y: 150,
+        opacity: 0,
+      });
+    },
+    { scope: containerRef }
+  );
+
   return (
     <section
       id="projects"
       className="min-h-screen w-full flex flex-col justify-center gap-6 hover:cursor-default select-none py-8"
     >
       <SectionTitle title="Projects" />
-      <div className="flex flex-col gap-10 group/wrapper">
+      <div className="flex flex-col gap-10 group/wrapper" ref={containerRef}>
         {PROJECTS.map((project, index) => (
           <Link
             key={project.slug}
