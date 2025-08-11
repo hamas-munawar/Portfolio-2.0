@@ -19,7 +19,7 @@ const HomeSection = () => {
             Developer
           </h2>
         </header>
-        <p className="text-md md:text-lg lg:text-xl max-w-xl text-white-whisper">
+        <p className="text-md md:text-lg lg:text-xl max-w-xl">
           Hi! I'm Hamas Munawar. A creative Fullstack Developer with 3+ years of
           experience in building high-performance, scalable, and responsive web
           applications, from intuitive user interfaces to robust back-end APIs
