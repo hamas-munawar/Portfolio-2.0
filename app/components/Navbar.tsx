@@ -75,8 +75,8 @@ const Navbar = () => {
           {/* Mobile menu content */}
           <div className="mobile-menu absolute top-0 right-0 translate-x-full overflow-hidden rounded-[50%]">
             <div className="w-screen sm:w-auto h-screen bg-gray-gunmetal flex flex-col items-center justify-center px-30">
-              <div className="flex flex-col-reverse md:flex-row gap-16">
-                <div className="flex flex-col gap-5">
+              <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 text-center md:text-left">
+                <div className="flex flex-col gap-3 md:gap-5">
                   <h4 className="text-xl tracking-widest font-semibold text-white-ghost uppercase">
                     Social
                   </h4>
@@ -95,7 +95,7 @@ const Navbar = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-3 md:gap-5">
                   <h4 className="text-xl tracking-widest font-semibold text-white-ghost uppercase">
                     Menu
                   </h4>
@@ -103,15 +103,15 @@ const Navbar = () => {
                     {pageLinks.map(({ label, href, colorClass }) => (
                       <li
                         key={label}
-                        className="group transition-all duration-300 ease-out flex justify-between items-center relative"
+                        className="group transition-all duration-300 ease-out relative"
                       >
                         <Link
                           href={href}
-                          className="text-xl ml-10"
+                          className="text-xl md:ml-10"
                           onClick={() => setMenu(false)}
                         >
                           <span
-                            className={`origin-left transition-all duration-300 ease-out absolute left-0 translate-1 h-4 w-4 rounded-full group-hover:scale-200 ${colorClass}`}
+                            className={`hidden md:block origin-left transition-all duration-300 ease-out absolute left-0 translate-1 h-4 w-4 rounded-full group-hover:scale-200 ${colorClass}`}
                           >
                             <MdArrowOutward className="hidden group-hover:block h-full w-full text-white-cool" />
                           </span>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="absolute bottom-5 text-left mx-16">
+              <div className="absolute bottom-5 mx-16 text-center md:text-left">
                 <h4 className="text-md tracking-widest font-semibold text-white-ghost uppercase">
                   Get in Touch
                 </h4>
