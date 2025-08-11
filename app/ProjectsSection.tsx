@@ -13,6 +13,7 @@ const ProjectsSection = () => {
       <div className="flex flex-col gap-10 group/wrapper">
         {PROJECTS.map((project, index) => (
           <Link
+            key={project.slug}
             href={`/projects/${project.slug}`}
             className={`flex flex-col sm:flex-row gap-2 group hover:cursor-pointer ${
               index !== PROJECTS.length - 1 && "border-b-2 border-gray-dim"
