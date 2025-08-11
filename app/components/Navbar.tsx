@@ -85,7 +85,7 @@ const Navbar = () => {
                       <li key={label}>
                         <Link
                           href={href}
-                          className="text-xl text-white-whisper hover:underline"
+                          className="text-xl  hover:underline"
                           onClick={() => setMenu(false)}
                         >
                           {label}
@@ -129,7 +129,7 @@ const Navbar = () => {
                 </h4>
                 <Link
                   href="mailto:muhammadhamasmunawar@gmail.com"
-                  className="text-white-whisper text-md hover:underline"
+                  className=" text-md hover:underline"
                 >
                   muhammadhamasmunawar@gmail.com
                 </Link>
