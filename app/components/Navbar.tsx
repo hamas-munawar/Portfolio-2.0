@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Mobile menu content */}
           <div className="mobile-menu absolute top-0 right-0 translate-x-full overflow-hidden rounded-[50%]">
             <div className="w-screen sm:w-auto h-screen bg-gray-gunmetal flex flex-col items-center justify-center px-30">
-              <div className="flex flex-col md:flex-row gap-16">
+              <div className="flex flex-col-reverse md:flex-row gap-16">
                 <div className="flex flex-col gap-5">
                   <h4 className="text-xl tracking-widest font-semibold text-white-ghost uppercase">
                     Social
