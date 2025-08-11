@@ -107,13 +107,13 @@ const Navbar = () => {
                       >
                         <Link
                           href={href}
-                          className="text-xl text-white-whisper ml-10"
+                          className="text-xl ml-10"
                           onClick={() => setMenu(false)}
                         >
                           <span
                             className={`origin-left transition-all duration-300 ease-out absolute left-0 translate-1 h-4 w-4 rounded-full group-hover:scale-200 ${colorClass}`}
                           >
-                            <MdArrowOutward className="hidden group-hover:block h-full w-full" />
+                            <MdArrowOutward className="hidden group-hover:block h-full w-full text-white-cool" />
                           </span>
                           {label}
                         </Link>
