@@ -17,6 +17,7 @@ const Footer = () => {
           Inspired By{" "}
           <Link
             href="https://www.me.toinfinite.dev/"
+            target="_blank"
             className="underline font-bold"
           >
             Tajmirul

@@ -56,12 +56,12 @@ const ProjectDetailPage = () => {
             </h1>
             <div className="flex gap-4 text-2xl lg:text-4xl">
               {project.githubUrl && (
-                <a href={project.githubUrl}>
+                <a href={project.githubUrl} target="_blank">
                   <FaGithub />
                 </a>
               )}
               {project.websiteUrl && (
-                <a href={project.websiteUrl}>
+                <a href={project.websiteUrl} target="_blank">
                   <FaLink />
                 </a>
               )}
