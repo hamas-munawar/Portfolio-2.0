@@ -97,7 +97,7 @@ const ContactPage = () => {
             Message
           </label>
         </div>
-        <div className="slide-up flex gap-8 items-baseline">
+        <div className="slide-up flex gap-4 md:gap-8 items-baseline">
           <div className="relative flex flex-col grow gap-2">
             <input
               type="email"
