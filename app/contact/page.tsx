@@ -39,7 +39,7 @@ const ContactPage = () => {
             Full Name
           </label>
         </div>
-        <div className="slide-up grid md:grid-cols-2 gap-8 md:gap-4">
+        <div className="slide-up grid md:grid-cols-2 gap-12 md:gap-4">
           <div className="relative flex flex-col gap-2">
             <input
               type="text"
