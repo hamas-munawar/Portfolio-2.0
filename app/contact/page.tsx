@@ -19,7 +19,7 @@ const ContactPage = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen grid place-content-center gap-16"
+      className="min-h-screen grid place-content-center gap-16 my-8 md:my-0"
     >
       <h3 className="slide-up text-center font-anton text-5xl">
         Let's Connect
