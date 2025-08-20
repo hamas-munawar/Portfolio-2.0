@@ -1,10 +1,12 @@
 "use client";
-import { PROJECTS } from "@/app/data/Projects";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useParams } from "next/navigation";
-import { FaGithub, FaLink } from "react-icons/fa";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import { FaGithub, FaLink } from 'react-icons/fa';
+
+import { PROJECTS } from '@/app/data/Projects';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -122,16 +124,14 @@ const ProjectDetailPage = () => {
           className="slide-up flex flex-col gap-4 w-3xl max-w-full mx-auto"
         >
           {project.images.map((image) => (
-            <div
+            <Image
+              src={image}
+              alt={"Project Image"}
+              width={"750"}
+              height={"400"}
               key={image}
-              className="group relative w-full aspect-[750/400] bg-background-light rounded-lg"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center 50%",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
+              className="rounded-lg"
+            ></Image>
           ))}
         </div>
       </section>
