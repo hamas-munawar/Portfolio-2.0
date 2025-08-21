@@ -1,22 +1,21 @@
 "use client";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
+import { useGSAP } from "@gsap/react";
+
 const socialLinks = [
-  { label: "Github", href: "#" },
-  { label: "Linked In", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
+  { label: "Github", href: "https://github.com/hamas-munawar" },
+  { label: "Instagram", href: "https://www.instagram.com/hamasmunawar/" },
 ];
 
 const pageLinks = [
   { label: "Home", href: "/", colorClass: "bg-yellow-400" },
-  { label: "About", href: "/about", colorClass: "bg-teal-400" },
-  { label: "Work", href: "/work", colorClass: "bg-blue-400" },
-  { label: "Contact", href: "/contact", colorClass: "bg-gray-400" },
+  { label: "About", href: "#about", colorClass: "bg-teal-400" },
+  { label: "Work", href: "#projects", colorClass: "bg-blue-400" },
+  { label: "Contact", href: "#contact", colorClass: "bg-gray-400" },
 ];
 
 const Navbar = () => {
@@ -84,6 +83,7 @@ const Navbar = () => {
                     {socialLinks.map(({ label, href }) => (
                       <li key={label}>
                         <Link
+                          target="_blank"
                           href={href}
                           className="text-xl  hover:underline"
                           onClick={() => setMenu(false)}

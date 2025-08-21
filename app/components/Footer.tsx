@@ -1,8 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="mx-auto text-center font-roboto flex flex-col gap-6 py-4">
+    <footer
+      id="contact"
+      className="mx-auto text-center font-roboto flex flex-col gap-6 py-4"
+    >
       <div className="flex flex-col gap-2">
         <p className="text-lg md:text-xl">Have idea in Mind ? </p>
         <Link

@@ -1,8 +1,10 @@
 "use client";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Link from "next/link";
 import React from "react";
+
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,11 +60,18 @@ const HomeSection = () => {
         </p>
         <div className="slide-up-and-fade flex gap-4">
           <button className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool">
-            Hire Me
+            <Link
+              target="_blank"
+              href={
+                "https://www.upwork.com/freelancers/~0118613b18d17f9733?mp_source=share"
+              }
+            >
+              Hire Me
+            </Link>
           </button>
-          <button className="w-fit text-white-cool font-semibold text-md md:text-lg lg:text-xl px-6 py-2 border-2 border-brand transition-all duration-300 hover:cursor-pointer hover:bg-brand hover:text-gray-jet">
+          {/* <button className="w-fit text-white-cool font-semibold text-md md:text-lg lg:text-xl px-6 py-2 border-2 border-brand transition-all duration-300 hover:cursor-pointer hover:bg-brand hover:text-gray-jet">
             Download CV
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="grid grid-cols-3 md:grid-cols-1 place-content-end gap-4 relative md:-bottom-48">
