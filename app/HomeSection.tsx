@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { label: "Years of Experience", value: "3+" },
-  { label: "Projects Complete", value: "6+" },
+  { label: "Projects Complete", value: "5+" },
   { label: "Hours Worked", value: "3k+" },
 ];
 
@@ -45,7 +45,7 @@ const HomeSection = () => {
     >
       <div className="flex flex-col gap-4">
         <header className="slide-up-and-fade uppercase">
-          <h2 className="text-5xl md:text-6xl lg:text-8xl font-anton text-brand">
+          <h2 className="slide-up-and-fade text-5xl md:text-6xl lg:text-8xl font-anton text-brand">
             Fullstack
           </h2>
           <h2 className="slide-up-and-fade ml-8 -translate-y-1 lg:-translate-y-2 text-5xl md:text-6xl lg:text-8xl font-anton text-white-ghost">
@@ -53,10 +53,10 @@ const HomeSection = () => {
           </h2>
         </header>
         <p className="slide-up-and-fade text-md md:text-lg lg:text-xl max-w-xl">
-          Hi! I'm Hamas Munawar. A creative Fullstack Developer with 3+ years of
-          experience in building high-performance, scalable, and responsive web
-          applications, from intuitive user interfaces to robust back-end APIs
-          and databases.
+          Hi! I&apos;m Hamas Munawar. A creative Fullstack Developer with 3+
+          years of experience in building high-performance, scalable, and
+          responsive web applications, from intuitive user interfaces to robust
+          back-end APIs and databases.
         </p>
         <div className="slide-up-and-fade flex gap-4">
           <button className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool">

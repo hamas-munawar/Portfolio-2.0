@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 
 const socialLinks = [
   { label: "Github", href: "https://github.com/hamas-munawar" },
-  { label: "Instagram", href: "https://www.instagram.com/hamasmunawar/" },
+  { label: "Instagram", href: "https://www.instagram.com/engineer.hamas" },
 ];
 
 const pageLinks = [
@@ -128,10 +128,10 @@ const Navbar = () => {
                   Get in Touch
                 </h4>
                 <Link
-                  href="mailto:muhammadhamasmunawar@gmail.com"
+                  href="mailto:engineer.hamas.munawar@gmail.com"
                   className=" text-md hover:underline"
                 >
-                  muhammadhamasmunawar@gmail.com
+                  engineer.hamas.munawar@gmail.com
                 </Link>
               </div>
             </div>
