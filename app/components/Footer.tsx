@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,14 +9,14 @@ const Footer = () => {
       <div className="flex flex-col gap-2">
         <p className="text-lg md:text-xl">Have idea in Mind ? </p>
         <Link
-          href={"mailto:muhammadhamasmunawar@gmail.com"}
+          href={"mailto:engineer.hamas.munawar@gmail.com"}
           className="font-anton hover:underline hover:cursor-pointer text-xl md:text-2xl lg:text-4xl"
         >
-          muhammadhamasmunawar@gmail.com
+          engineer.hamas.munawar@gmail.com
         </Link>
       </div>
       <div className="flex flex-col gap-2">
-        <p className="text-xl">
+        <p className="text-lg">
           Inspired By{" "}
           <Link
             href="https://www.me.toinfinite.dev/"
@@ -26,7 +26,7 @@ const Footer = () => {
             Tajmirul
           </Link>
         </p>
-        <p className="text-xl">
+        <p className="text-lg">
           Rebuild By <span className="underline font-bold">Hamas Munawar</span>
         </p>
       </div>
