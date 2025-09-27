@@ -1,29 +1,29 @@
 "use client";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import { FaGithub, FaLink } from "react-icons/fa";
 
-import { PROJECTS } from '@/app/data/Projects';
-import { useGSAP } from '@gsap/react';
+import { PROJECTS } from "@/app/data/Projects";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
 
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      delay: 0.5,
-    });
+  // useGSAP(() => {
+  //   const tl = gsap.timeline({
+  //     delay: 0.5,
+  //   });
 
-    tl.from(".slide-up", {
-      opacity: 0,
-      y: 40,
-      stagger: 0.025,
-    });
-  });
+  //   tl.from(".slide-up", {
+  //     opacity: 0,
+  //     y: 40,
+  //     stagger: 0.025,
+  //   });
+  // });
 
   useGSAP(() => {
     if (window.innerWidth < 992) return;
