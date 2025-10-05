@@ -13,7 +13,7 @@ const socialLinks = [
 
 const pageLinks = [
   { label: "Home", href: "/", colorClass: "bg-yellow-400" },
-  { label: "About", href: "#about", colorClass: "bg-teal-400" },
+  { label: "About", href: "/about", colorClass: "bg-teal-400" },
   { label: "Work", href: "#projects", colorClass: "bg-blue-400" },
   { label: "Contact", href: "#contact", colorClass: "bg-gray-400" },
 ];

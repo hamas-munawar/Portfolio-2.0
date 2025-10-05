@@ -1,9 +1,12 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import React from "react";
+import { BiRightArrowAlt } from "react-icons/bi";
+
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +70,7 @@ const AboutSection = () => {
       </p>
       <div className="flex flex-col md:flex-row gap-8 mx-auto">
         <h2 className="grow-1 text-2xl sm:text-3xl md:text-4xl slide-up-and-fade text-white-ghost">
-          Hi, I'm Hamas.
+          Hi, I&apos;m Hamas.
         </h2>
         <div className="w-full md:w-[60%] space-y-4 md:pr-10 lg:pr-24 slide-up-and-fade text-lg md:text-xl">
           <p className="slide-up-and-fade">
@@ -84,6 +87,12 @@ const AboutSection = () => {
             tangible results.
           </p>
         </div>
+      </div>
+      <div className="slide-up-and-fade flex items-center justify-center justify-self-end text-brand mt-4">
+        <Link href="/about">
+          Wanna Know more
+          <BiRightArrowAlt className="inline-block ml-2" />
+        </Link>
       </div>
     </section>
   );

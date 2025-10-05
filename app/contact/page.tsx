@@ -1,7 +1,8 @@
 "use client";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { IoIosSend } from "react-icons/io";
+
+import { useGSAP } from "@gsap/react";
 
 const ContactPage = () => {
   useGSAP(() => {
@@ -22,7 +23,7 @@ const ContactPage = () => {
       className="min-h-screen grid place-content-center gap-16 my-8 md:my-0"
     >
       <h3 className="slide-up text-center font-anton text-5xl">
-        Let's Connect
+        Let&apos;s Connect
       </h3>
       <form className="text-white-cool flex flex-col gap-12 w-screen max-w-[720] mx-auto px-4">
         <div className="slide-up relative flex flex-col gap-2">
