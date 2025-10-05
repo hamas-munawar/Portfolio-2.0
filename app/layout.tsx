@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// @ts-expect-error no types
+// @ts-ignore
 import "./globals.css";
 
 import { Anton, Roboto } from "next/font/google";
