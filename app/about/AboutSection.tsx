@@ -23,8 +23,8 @@ const AboutSection = () => {
       <div className="min-h-[400px] flex items-center justify-center">
         <Image
           src="/personal.png"
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           alt="Developer illustration"
           className="inset-0 bg-brand rounded-full"
         />
