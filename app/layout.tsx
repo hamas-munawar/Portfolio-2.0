@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 // @ts-ignore
-import "./globals.css";
+import './globals.css';
 
-import { Anton, Roboto } from "next/font/google";
+import { Anton, Roboto } from 'next/font/google';
 
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import ParticleBackground from "./components/ParticlesBackground";
-import OpeningAnimation from "./OpeningAnimation";
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 const anton = Anton({
   weight: "400",
@@ -37,8 +35,8 @@ export default function RootLayout({
       <body
         className={`${anton.variable} ${roboto.variable} antialiased container mx-auto px-4 sm:px-10 bg-black/80 text-white-whisper select-none cursor-default font-roboto`}
       >
-        <OpeningAnimation />
-        <ParticleBackground />
+        {/* <OpeningAnimation /> */}
+        {/* <ParticleBackground /> */}
         <Navbar />
         {children}
         <Footer />
