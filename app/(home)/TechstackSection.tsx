@@ -1,11 +1,13 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
-import Icon from "./components/Icon";
-import { TECHSTACK } from "./data/TechStack";
+
+import { useGSAP } from "@gsap/react";
+
+import Icon from "../components/Icon";
+import { TECHSTACK } from "../data/TechStack";
 import SectionTitle from "./SectionTitle";
 
 gsap.registerPlugin(ScrollTrigger);

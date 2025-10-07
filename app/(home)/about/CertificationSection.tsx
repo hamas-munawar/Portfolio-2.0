@@ -4,9 +4,8 @@ import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 
+import { Certificates } from "@/app/data/Certificates";
 import { useGSAP } from "@gsap/react";
-
-import { Certificates } from "../data/Certificates";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,8 +21,8 @@ const CertificationSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom 90%",
+          start: "top 100%",
+          end: "bottom 100%",
           scrub: 0.5,
         },
       });

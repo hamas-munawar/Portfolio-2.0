@@ -3,9 +3,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
+import { Journey } from "@/app/data/Journey";
 import { useGSAP } from "@gsap/react";
 
-import { Journey } from "../data/Journey";
 import JourneyCard from "./JourneyCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,8 +22,8 @@ const JourneySection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom 80%",
+          start: "top 100%",
+          end: "bottom 120%",
           scrub: 0.5,
         },
       });
@@ -44,7 +44,7 @@ const JourneySection = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "bottom 50%",
-          end: "bottom 10%",
+          end: "bottom 0%",
           scrub: 1,
         },
       });
@@ -71,7 +71,7 @@ const JourneySection = () => {
           <line x1="1" y1="0" x2="1" y2="1000" strokeWidth="16" />
         </svg>
 
-        <div className="flex flex-col gap-12 md:gap-8 px-4 md:px-0">
+        <div className="flex flex-col gap-16 md:gap-8 px-4 md:px-0">
           {Journey.map((item, index) => (
             <div className="slide-up" key={index}>
               <JourneyCard position={index % 2 === 0 ? "left" : "right"}>

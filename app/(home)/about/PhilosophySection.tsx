@@ -1,4 +1,4 @@
-import { Philosophy } from "../data/Philosophy";
+import { Philosophy } from "@/app/data/Philosophy";
 
 const PhilosophySection = () => {
   return (

@@ -22,10 +22,10 @@ export default function RootLayout({
       duration: 0.25,
     })
       .to(".second", {
-        y: "-100%",
+        y: "-120%",
         duration: 0.25,
       })
-      .to(".parent", { y: "-100%", duration: 0.8, delay: 0.3 });
+      .to(".parent", { y: "-120%", duration: 0.8, delay: 0.3 });
 
     tl.from(".slide-up", {
       opacity: 0,
