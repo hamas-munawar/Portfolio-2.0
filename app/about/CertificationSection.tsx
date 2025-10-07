@@ -23,7 +23,7 @@ const CertificationSection = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 80%",
-          end: "bottom 80%",
+          end: "bottom 90%",
           scrub: 0.5,
         },
       });
