@@ -1,7 +1,9 @@
 "use client";
 
-import ProcessSection from "./ProcessSection";
-import ServicesSection from "./ServicesSection";
+import AboutSection from "./AboutSection";
+import CertificationSection from "./CertificationSection";
+import JourneySection from "./ProcessSection";
+import PhilosophySection from "./ServicesSection";
 
 const AboutPage = () => {
   return (
@@ -12,19 +14,22 @@ const AboutPage = () => {
       <main className="slide-up flex flex-col gap-16">
         <section className="text-center">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton font-bold mb-4 animate-fade-in-up">
-            <span className="text-brand">Services</span> I Offer
+            <span className="text-brand">About</span> Me
           </h1>
           <p className="text-lg lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-200">
-            I translate complex ideas into elegant, high-performance web
-            applications. Explore the specific{" "}
-            <strong>services, technologies, and methodologies</strong> I use to
-            bring modern digital products to market.
+            Discover the journey behind the code. Here, I share my passion, my
+            path, and the principles that drive my work as a Fullstack
+            Developer.
           </p>
         </section>
 
-        <ServicesSection />
+        <AboutSection />
 
-        <ProcessSection />
+        <PhilosophySection />
+
+        <JourneySection />
+
+        <CertificationSection />
       </main>
     </section>
   );
