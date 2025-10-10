@@ -46,6 +46,7 @@ const Navbar = () => {
         <button
           onClick={() => setMenu(!menu)}
           className="relative w-10 h-10 group hover:cursor-pointer z-[110] outline-none"
+          name="navbar-menu-button"
         >
           <div className="flex flex-col justify-center items-center h-full w-full gap-2">
             <span

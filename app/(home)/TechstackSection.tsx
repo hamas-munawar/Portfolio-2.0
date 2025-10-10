@@ -1,14 +1,14 @@
 "use client";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { useRef } from 'react';
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from '@gsap/react';
 
-import Icon from "../components/Icon";
-import { TECHSTACK } from "../data/TechStack";
-import SectionTitle from "./SectionTitle";
+import Icon from '../components/Icon';
+import { TECHSTACK } from '../data/TechStack';
+import SectionTitle from './SectionTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,13 +71,13 @@ const TechstackSection = () => {
             key={key}
             className="slide-up flex flex-col md:flex-row justify-between gap-4"
           >
-            <h5
+            <h3
               className={`text-white-cool ${
                 index !== 0 && "slide-up"
               } text-4xl md:text-5xl font-anton uppercase pb-2`}
             >
               {key}
-            </h5>
+            </h3>
             <div className="md:w-[60%] flex flex-wrap gap-x-8 gap-y-6">
               {TECHSTACK[key].map(({ label, iconName }) => (
                 <Icon

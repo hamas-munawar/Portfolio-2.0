@@ -59,7 +59,7 @@ const HomeSection = () => {
           back-end APIs and databases.
         </p>
         <div className="slide-up-and-fade flex gap-4">
-          <button className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool">
+          <button className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool" name="hire-me-button">
             <Link
               target="_blank"
               href={

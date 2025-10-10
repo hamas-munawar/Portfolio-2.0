@@ -115,7 +115,7 @@ const ContactPage = () => {
           </div>
           <button
             type="submit"
-            className="px-4 py-2 bg-brand hover:cursor-pointer text-gray-jet flex gap-4 items-center text-sm md:text-xl outline-none"
+            className="px-4 py-2 bg-brand hover:cursor-pointer text-gray-jet flex gap-4 items-center text-sm md:text-xl outline-none" name="Send Message"
           >
             Send
             <IoIosSend className="text-lg md:text-2xl" />
