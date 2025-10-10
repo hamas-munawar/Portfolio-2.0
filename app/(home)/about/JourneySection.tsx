@@ -19,6 +19,19 @@ const JourneySection = () => {
 
       if (!slideUpEl?.length) return;
 
+      gsap.from(".process-timeline-line", {
+        // This tells GSAP to draw the line from the top to the bottom
+        strokeDashoffset: (i, target) => target.getTotalLength(),
+        duration: 2,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".process-timeline-line",
+          start: "top center", // Start drawing when the line enters the center of the viewport
+          end: "bottom center", // Stop drawing when the line reaches the center of the viewport
+          scrub: 1, // Smoothly link the animation to scroll position
+        },
+      });
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -68,7 +81,15 @@ const JourneySection = () => {
           viewBox="0 0 2 1000"
           preserveAspectRatio="none"
         >
-          <line x1="1" y1="0" x2="1" y2="1000" strokeWidth="16" />
+          <line
+            x1="1"
+            y1="0"
+            x2="1"
+            y2="1000"
+            strokeWidth="16"
+            strokeDasharray="8 8"
+            className="process-timeline-line"
+          />
         </svg>
 
         <div className="flex flex-col gap-16 md:gap-8 px-4 md:px-0">

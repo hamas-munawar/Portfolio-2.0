@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 
-export default function AboutTemplate({
+export default function ServicesTemplate({
   children,
 }: Readonly<{
   children: React.ReactNode;
