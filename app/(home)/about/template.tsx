@@ -53,8 +53,8 @@ export default function AboutTemplate({
 
   return (
     <div className="relative" ref={parentRef}>
-      <div className="dark-layer fixed top-0 left-0 w-full h-full bg-[#222] z-50"></div>
-      <div className="brand-layer fixed top-0 left-0 w-full h-full bg-brand z-40"></div>
+      <div className="dark-layer fixed top-0 left-0 w-full h-full bg-[#222] z-40"></div>
+      <div className="brand-layer fixed top-0 left-0 w-full h-full bg-brand z-30"></div>
 
       <div className="relative z-10">{children}</div>
     </div>

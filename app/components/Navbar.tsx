@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [menu]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 p-4 z-[5]">
+    <header className="fixed top-0 left-0 right-0 p-4 z-20">
       <nav className="flex justify-end max-w-screen mx-auto">
         <button
           onClick={() => setMenu(!menu)}

@@ -1,7 +1,8 @@
 "use client";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -43,7 +44,7 @@ const OpeningAnimation = () => {
   const name = "Hamas";
 
   return (
-    <div className="fixed inset-0 z-[6] flex" ref={preloaderRef}>
+    <div className="fixed inset-0 z-50 flex" ref={preloaderRef}>
       {Array.from({ length: 10 }).map((value, index) => (
         <div key={index} className="slides h-full w-[10%] bg-[#151515]"></div>
       ))}
