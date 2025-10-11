@@ -6,52 +6,18 @@ import { useParams } from "next/navigation";
 import { FaGithub, FaLink } from "react-icons/fa";
 
 import { PROJECTS } from "@/app/data/Projects";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
 
-  // useGSAP(() => {
-  //   const tl = gsap.timeline({
-  //     delay: 0.5,
-  //   });
-
-  //   tl.from(".slide-up", {
-  //     opacity: 0,
-  //     y: 40,
-  //     stagger: 0.025,
-  //   });
-  // });
-
-  useGSAP(() => {
-    if (window.innerWidth < 992) return;
-
-    gsap.to("#info", {
-      filter: "blur(3px)",
-      autoAlpha: 0,
-      scale: 0.9,
-      scrollTrigger: {
-        trigger: "#info",
-        start: "bottom 80%",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
-        scrub: 0.5,
-      },
-    });
-  });
-
   const project = PROJECTS.find((project) => project.slug === slug);
 
   if (project)
     return (
-      <section
-        id="project-detail"
-        className="min-h-screen w-full hover:cursor-default select-none py-8 font-roboto flex flex-col gap-8 lg:px-50"
-      >
-        <div id="info" className="flex flex-col gap-8 mt-8">
+      <section className="min-h-screen w-full hover:cursor-default select-none py-8 font-roboto flex flex-col gap-8 lg:px-50">
+        <div className="flex flex-col gap-8 mt-8">
           <header className="slide-up flex flex-col md:flex-row gap-2 sm:gap-4 md:items-center">
             <h1 className="font-anton text-5xl md:text-6xl lg:text-7xl">
               {project.name}
