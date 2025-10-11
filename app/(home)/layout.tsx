@@ -6,6 +6,8 @@ import { Anton, Roboto } from "next/font/google";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ParticleBackground from "../components/ParticlesBackground";
+import OpeningAnimation from "./OpeningAnimation";
 
 const anton = Anton({
   weight: "400",
