@@ -1,62 +1,14 @@
 "use client";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import * as LucideIcons from "lucide-react";
 import { useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 
+import { ProcessSteps } from "../../data/ProcessSteps";
 import ProcessCard from "./ProcessCard";
 
 gsap.registerPlugin(ScrollTrigger);
-
-// Define the type for a single Process Step
-export interface ProcessStep {
-  title: string;
-  description: string;
-  icon: keyof typeof LucideIcons;
-}
-
-// --- Dummy Data ---
-const ProcessSteps: ProcessStep[] = [
-  {
-    title: "Discovery & Planning",
-    description:
-      "We start by deeply understanding your goals, audience, and technical requirements. This includes research, wireframing, and creating a detailed project plan.",
-    icon: "Search",
-  },
-  {
-    title: "Design & Prototyping",
-    description:
-      "Translating the plan into a visual concept. We create high-fidelity designs and interactive prototypes, ensuring an intuitive and engaging user experience.",
-    icon: "Palette",
-  },
-  {
-    title: "Development & Integration",
-    description:
-      "The core build phase. We write clean, efficient code, integrate necessary APIs, and implement features following the approved design and architecture.",
-    icon: "Code",
-  },
-  {
-    title: "Testing & Quality Assurance",
-    description:
-      "Rigorously testing the application across various devices and scenarios to identify and fix bugs. We ensure performance, security, and stability.",
-    icon: "CheckCircle",
-  },
-  {
-    title: "Deployment & Launch",
-    description:
-      "Preparing the final product for release. We handle all deployment processes, ensuring a smooth launch and providing initial monitoring.",
-    icon: "Rocket",
-  },
-  {
-    title: "Maintenance & Future Scaling",
-    description:
-      "Post-launch support, continuous monitoring, and optimization. We discuss strategies for future feature development and scaling.",
-    icon: "RefreshCcw",
-  },
-];
-// --------------------
 
 const ProcessSection = () => {
   const containerRef = useRef<HTMLElement>(null);
