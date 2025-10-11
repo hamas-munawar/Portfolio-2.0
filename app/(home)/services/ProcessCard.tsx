@@ -18,9 +18,6 @@ const ProcessCard: React.FC<ProcessBlockProps> = ({
   stepNumber,
   iconName,
 }) => {
-  // Use generic classes directly
-
-  // 💡 FIX: Cast the dynamically retrieved icon to the correct component type.
   const IconComponent = LucideIcons[iconName] as LucideIconComponent;
   const FinalIconComponent = (IconComponent ||
     LucideIcons.HelpCircle) as LucideIconComponent;

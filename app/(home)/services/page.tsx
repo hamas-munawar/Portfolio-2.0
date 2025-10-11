@@ -1,5 +1,3 @@
-"use client";
-
 import ProcessSection from "./ProcessSection";
 import ServicesSection from "./ServicesSection";
 
