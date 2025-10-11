@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "Hamas - Portfolio",
   description:
     "Web Developer portfolio, can build frontend, backend and fullstack web apps",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
