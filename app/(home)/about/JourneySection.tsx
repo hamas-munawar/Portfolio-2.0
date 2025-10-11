@@ -95,7 +95,10 @@ const JourneySection = () => {
         <div className="flex flex-col gap-16 md:gap-8 px-4 md:px-0">
           {Journey.map((item, index) => (
             <div className="slide-up" key={index}>
-              <JourneyCard position={index % 2 === 0 ? "left" : "right"}>
+              <JourneyCard
+                position={index % 2 === 0 ? "left" : "right"}
+                year={item.year}
+              >
                 <h3 className="text-3xl font-bold text-brand">{item.title}</h3>
                 <p className="text-gray-300 xl:text-lg">{item.description}</p>
               </JourneyCard>
