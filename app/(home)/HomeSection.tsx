@@ -40,7 +40,7 @@ const HomeSection = () => {
   return (
     <section
       id="hero-section"
-      className="min-h-screen grid md:grid-cols-2 gap-10 place-content-center text-text"
+      className="h-screen max-h-[1080px] grid md:grid-cols-2 gap-10 place-content-center text-text"
       ref={containerRef}
     >
       <div className="flex flex-col gap-4">
@@ -59,7 +59,10 @@ const HomeSection = () => {
           back-end APIs and databases.
         </p>
         <div className="slide-up-and-fade flex gap-4">
-          <button className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool" name="hire-me-button">
+          <button
+            className="w-fit bg-brand text-gray-jet font-semibold text-md md:text-lg lg:text-xl px-6 py-2 transition-all duration-300 hover:cursor-pointer border-2 border-brand hover:bg-transparent hover:text-white-cool"
+            name="hire-me-button"
+          >
             <Link
               target="_blank"
               href={
