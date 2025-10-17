@@ -1,3 +1,4 @@
+// src/components/ProjectItem.tsx
 "use client";
 
 import gsap from "gsap";
@@ -20,19 +21,32 @@ interface ProjectItemProps {
   project: Project;
   index: number;
   total: number;
+  onProjectEnter: (
+    thumbnail: string | StaticImageData,
+    itemElement: HTMLDivElement,
+    index: number
+  ) => void;
+  onProjectMove: (
+    e: React.MouseEvent<HTMLDivElement>,
+    itemElement: HTMLDivElement
+  ) => void;
+  onProjectLeave: () => void;
+  isHovered: boolean;
+  isFaded: boolean;
 }
 
-// Config
-const BOX_MOVE_X = 40; // px left/right
-const BOX_MOVE_Y = 28; // px up/down
-const MIN_OPACITY = 0.9; // dimmest at far corners
-const FOLLOW_SMOOTH = 0.14; // movement tween duration
-
-const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
-  const rowRef = useRef<HTMLDivElement>(null); // hover area
+const ProjectItem = ({
+  project,
+  index,
+  total,
+  onProjectEnter,
+  onProjectMove,
+  onProjectLeave,
+  isHovered,
+  isFaded,
+}: ProjectItemProps) => {
+  const rowRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
-  const boxRef = useRef<HTMLDivElement>(null); // moves as a whole
-
   const arrowTL = useRef<gsap.core.Timeline | null>(null);
 
   useGSAP(
@@ -42,14 +56,7 @@ const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
         svgRef.current?.querySelector<SVGPathElement>("#arrow-line");
       const arrowCurb =
         svgRef.current?.querySelector<SVGPathElement>("#arrow-curb");
-      if (
-        !svgRef.current ||
-        !boxPath ||
-        !arrowLine ||
-        !arrowCurb ||
-        !boxRef.current
-      )
-        return;
+      if (!svgRef.current || !boxPath || !arrowLine || !arrowCurb) return;
 
       // Arrow initial + path lengths
       gsap.set(svgRef.current, { autoAlpha: 0 });
@@ -58,17 +65,7 @@ const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
         strokeDashoffset: (_, t) => (t as SVGPathElement).getTotalLength(),
       });
 
-      // Image box initial: center vertically via yPercent so Y can animate freely
-      gsap.set(boxRef.current, {
-        autoAlpha: 0,
-        opacity: 0,
-        x: 0,
-        y: 8,
-        yPercent: -50, // replaces -translate-y-1/2
-        willChange: "transform, opacity",
-      });
-
-      // Arrow timeline (your original durations/overlaps)
+      // Arrow timeline
       arrowTL.current = gsap
         .timeline({ paused: true })
         .to(
@@ -96,77 +93,20 @@ const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
   );
 
   const handleEnter = () => {
-    // Preload/decode for instant first hover
-    const src =
-      typeof project.thumbnail === "string"
-        ? project.thumbnail
-        : project.thumbnail.src;
-    if (typeof window !== "undefined" && src) new window.Image().src = src;
-    const imgEl = boxRef.current?.querySelector(
-      "img"
-    ) as HTMLImageElement | null;
-    if (imgEl && "decode" in imgEl) imgEl.decode().catch(() => {});
-
-    // Reset and show fast
-    if (boxRef.current) {
-      gsap.killTweensOf(boxRef.current);
-      gsap.set(boxRef.current, { x: 0, y: 0 });
-      gsap.fromTo(
-        boxRef.current,
-        { autoAlpha: 0, opacity: 0, y: 8 },
-        {
-          autoAlpha: 1,
-          opacity: 1,
-          y: 0,
-          duration: 0.14,
-          ease: "power2.out",
-          overwrite: "auto",
-        }
-      );
+    if (rowRef.current) {
+      onProjectEnter(project.thumbnail, rowRef.current, index);
     }
-
     arrowTL.current?.play();
   };
 
-  const handleMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    if (!rowRef.current || !boxRef.current) return;
-
-    const rect = rowRef.current.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width; // 0..1
-    const py = (e.clientY - rect.top) / rect.height; // 0..1
-    const nx = px * 2 - 1; // -1..1 (x)
-    const ny = py * 2 - 1; // -1..1 (y)
-
-    const targetX = nx * BOX_MOVE_X;
-    const targetY = ny * BOX_MOVE_Y;
-
-    // Smooth move + opacity modulation
-    gsap.to(boxRef.current, {
-      x: targetX,
-      y: targetY,
-      opacity:
-        1 - (1 - MIN_OPACITY) * Math.min(1, Math.hypot(nx, ny) / Math.SQRT2),
-      duration: FOLLOW_SMOOTH,
-      ease: "power3.out",
-      overwrite: "auto",
-      force3D: true,
-    });
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (rowRef.current) {
+      onProjectMove(e, rowRef.current);
+    }
   };
 
   const handleLeave = () => {
-    if (!boxRef.current) return;
-
-    gsap.killTweensOf(boxRef.current);
-    gsap.to(boxRef.current, {
-      x: 0,
-      y: 0,
-      opacity: 0,
-      autoAlpha: 0,
-      duration: 0.16,
-      ease: "power2.out",
-      overwrite: "auto",
-    });
-
+    onProjectLeave();
     arrowTL.current?.timeScale(1.2).reverse();
   };
 
@@ -177,9 +117,13 @@ const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
         onMouseEnter={handleEnter}
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}
-        className={`relative group flex flex-col sm:flex-row gap-2 hover:cursor-pointer ${
+        className={`pt-10 relative group flex flex-col sm:flex-row gap-2 hover:cursor-pointer ${
           index !== total - 1 ? "border-b-2 border-gray-dim" : ""
         } pb-4 transition-all duration-300`}
+        style={{
+          opacity: isFaded ? 0.3 : 1,
+          transition: "opacity 0.3s ease",
+        }}
       >
         {/* Mobile thumbnail */}
         <Image
@@ -234,23 +178,6 @@ const ProjectItem = ({ project, index, total }: ProjectItemProps) => {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* WHOLE image box (follows cursor on X & Y, with opacity) */}
-        <div
-          ref={boxRef}
-          className="hidden sm:block pointer-events-none z-40 absolute right-10 top-1/2 rounded-xl overflow-hidden shadow-2xl"
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          <Image
-            src={project.thumbnail}
-            alt="Project"
-            width={300}
-            height={600}
-            className="aspect-[1/2] object-cover object-top select-none"
-            loading="lazy"
-            draggable={false}
-          />
         </div>
       </div>
     </Link>
