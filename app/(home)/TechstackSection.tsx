@@ -1,14 +1,14 @@
 "use client";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { useRef } from 'react';
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from '@gsap/react';
 
-import Icon from "../components/Icon";
-import { TECHSTACK } from "../data/TechStack";
-import SectionTitle from "./SectionTitle";
+import Icon from '../components/Icon';
+import { TECHSTACK } from '../data/TechStack';
+import SectionTitle from './SectionTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,8 +61,8 @@ const TechstackSection = () => {
 
   return (
     <section
-      id="tect-stack"
-      className="slide-up h-screen max-h-[1080px] grid place-content-center gap-6 select-none py-8"
+      id="tech-stack"
+      className="slide-up min-h-screen md:min-h-fit md:max-h-[1080px] grid place-content-center gap-6 select-none py-8"
     >
       <SectionTitle title="My Stack" />
       <div className=" flex flex-col gap-16" ref={containerRef}>

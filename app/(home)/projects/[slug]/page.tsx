@@ -1,11 +1,11 @@
 "use client";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import Image from "next/image";
-import { useParams } from "next/navigation";
-import { FaGithub, FaLink } from "react-icons/fa";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
-import { PROJECTS } from "@/app/data/Projects";
+import { PROJECTS } from '@/app/data/Projects';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,19 +18,19 @@ const ProjectDetailPage = () => {
     return (
       <section className="min-h-screen w-full hover:cursor-default select-none py-8 font-roboto flex flex-col gap-8 lg:px-50">
         <div className="flex flex-col gap-8 mt-8">
-          <header className="slide-up flex flex-col md:flex-row gap-2 sm:gap-4 md:items-center">
+          <header className="slide-up grid grid-cols-[1fr_auto] justify-between gap-2 sm:gap-4 md:items-center">
             <h1 className="font-anton text-5xl md:text-6xl lg:text-7xl">
               {project.name}
             </h1>
             <div className="flex gap-4 text-2xl lg:text-4xl">
               {project.githubUrl && (
                 <a href={project.githubUrl} target="_blank">
-                  <FaGithub />
+                  <FaGithub className="hover:fill-brand" />
                 </a>
               )}
               {project.websiteUrl && (
                 <a href={project.websiteUrl} target="_blank">
-                  <FaLink />
+                  <FaLink className="hover:fill-brand" />
                 </a>
               )}
             </div>

@@ -1,10 +1,10 @@
 "use client";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import Link from "next/link";
-import React from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import Link from 'next/link';
+import React from 'react';
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +40,7 @@ const HomeSection = () => {
   return (
     <section
       id="hero-section"
-      className="h-screen max-h-[1080px] grid md:grid-cols-2 gap-10 place-content-center text-text"
+      className="h-screen md:max-h-[1080px] grid md:grid-cols-2 gap-10 place-content-center text-text"
       ref={containerRef}
     >
       <div className="flex flex-col gap-4">

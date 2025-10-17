@@ -1,14 +1,14 @@
 // src/components/ProjectsSection.tsx
 "use client";
-import gsap from "gsap";
-import Image, { StaticImageData } from "next/image";
-import { useRef, useState } from "react";
+import gsap from 'gsap';
+import Image, { StaticImageData } from 'next/image';
+import { useRef, useState } from 'react';
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from '@gsap/react';
 
-import { PROJECTS } from "../data/Projects";
-import ProjectItem from "./ProjectItem";
-import SectionTitle from "./SectionTitle";
+import { PROJECTS } from '../data/Projects';
+import ProjectItem from './ProjectItem';
+import SectionTitle from './SectionTitle';
 
 // Config
 const BOX_MOVE_X = 40;
@@ -17,7 +17,7 @@ const MIN_OPACITY = 0.9;
 const FOLLOW_SMOOTH = 0.14;
 const POSITION_TRANSITION = 0.3; // Duration for position changes between projects
 const IMAGE_TRANSITION = 0; // Duration for image fade transition
-const IMAGE_RIGHT_OFFSET = 350; // Distance from right edge
+const IMAGE_RIGHT_OFFSET = 200; // Distance from right edge
 const IMAGE_HEIGHT = 600; // Height of the image (aspect ratio 1/2, width 300)
 const VIEWPORT_PADDING = 20; // Padding from viewport edges
 
@@ -237,7 +237,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="h-screen max-h-[1080px] w-full flex flex-col justify-center gap-6 hover:cursor-default select-none py-8 relative"
+      className="min-h-screen md:min-h-fit md:max-h-[1080px] w-full flex flex-col justify-center gap-6 hover:cursor-default select-none py-8 relative"
     >
       <SectionTitle title="Projects" />
       <div className="flex flex-col group/wrapper" ref={containerRef}>

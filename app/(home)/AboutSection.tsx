@@ -1,12 +1,12 @@
 "use client";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
-import React from "react";
-import { BiRightArrowAlt } from "react-icons/bi";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
+import React from 'react';
+import { BiRightArrowAlt } from 'react-icons/bi';
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +58,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="h-screen max-h-[1080px] grid place-content-center gap-6 md:gap-12"
+      className="min-h-screen md:min-h-fit md:max-h-[1080px] grid place-content-center gap-6 md:gap-12"
       ref={container}
     >
       <p className="font-thin text-2xl sm:text-4xl md:text-5xl md:pr-12 text-white-ghost slide-up-and-fade">
