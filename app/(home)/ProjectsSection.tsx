@@ -16,8 +16,8 @@ const BOX_MOVE_Y = 28;
 const MIN_OPACITY = 0.9;
 const FOLLOW_SMOOTH = 0.14;
 const POSITION_TRANSITION = 0.3; // Duration for position changes between projects
-const IMAGE_TRANSITION = 0.2; // Duration for image fade transition
-const IMAGE_RIGHT_OFFSET = 250; // Distance from right edge
+const IMAGE_TRANSITION = 0; // Duration for image fade transition
+const IMAGE_RIGHT_OFFSET = 350; // Distance from right edge
 const IMAGE_HEIGHT = 600; // Height of the image (aspect ratio 1/2, width 300)
 const VIEWPORT_PADDING = 20; // Padding from viewport edges
 
