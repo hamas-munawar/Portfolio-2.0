@@ -65,7 +65,7 @@ const CertificationSection = () => {
       <div className="slide-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {Certificates.map((cert, index) => (
           <div className="slide-up" key={index}>
-            <div className="group p-0 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+            <div className="group p-0 rounded-lg shadow-lg overflow-hidden transition duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand/20">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src={cert.url}

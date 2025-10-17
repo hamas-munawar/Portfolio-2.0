@@ -31,7 +31,9 @@ const ServicesSection: React.FC = () => {
 
               {/* Category Description */}
               <p className="text-gray-400 text-base lg:text-lg md:pl-10">
-                {category.description}
+                <span
+                  dangerouslySetInnerHTML={{ __html: category.description }}
+                />
               </p>
             </div>
 
@@ -56,7 +58,9 @@ const ServicesSection: React.FC = () => {
 
                   {/* Service Description */}
                   <p className="text-gray-300 leading-relaxed text-sm">
-                    {service.description}
+                    <span
+                      dangerouslySetInnerHTML={{ __html: service.description }}
+                    />
                   </p>
                 </div>
               ))}

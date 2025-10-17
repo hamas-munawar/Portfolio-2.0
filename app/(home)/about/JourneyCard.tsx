@@ -15,7 +15,7 @@ const JourneyCard: React.FC<ProcessBlockProps> = ({
     <div
       className={`relative flex flex-col md:flex-row items-center justify-${
         position === "left" ? "start" : "end"
-      } w-full`}
+      } w-full `}
     >
       {position === "right" && (
         <>
@@ -33,7 +33,7 @@ const JourneyCard: React.FC<ProcessBlockProps> = ({
       )}
 
       <div
-        className={`relative md:w-1/2 p-6 rounded-lg shadow-xl  flex flex-col gap-2 ${
+        className={`relative md:w-1/2 p-6 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-brand/20  flex flex-col gap-2 ${
           position === "right" ? "md:ml-8 lg:ml-16" : "md:mr-8 lg:mr-16"
         } text-left`}
       >

@@ -74,7 +74,7 @@ const PhilosophySection = () => {
               index === Philosophy.length - 1 &&
               index % 2 === 0 &&
               "md:col-span-2"
-            }`}
+            } hover:shadow-2xl hover:shadow-brand/20`}
           >
             <h3 className="text-3xl font-bold text-brand">{item.title}</h3>
             <p className="text-gray-300 lg:text-lg">

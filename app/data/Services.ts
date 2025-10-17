@@ -10,119 +10,125 @@ import {
 
 export const ServiceCategories = [
   // ----------------------------------------------------------------------
-  // 1. WEBSITE DESIGN & USER EXPERIENCE
-  // Focus: Conversions, SEO, and Mobile Readiness
+  // 1. HIGH-PERFORMANCE FRONTEND & UX
+  // Focus: Speed, SEO, and Brand Credibility
   // ----------------------------------------------------------------------
   {
-    categoryTitle: "High-Converting Website Design & SEO Performance",
+    categoryTitle: "Visually Stunning & Lightning-Fast Frontend Engineering",
     icon: Monitor,
     description:
-      "We build visually stunning websites engineered for the fastest speeds, top search engine rankings, and maximum accessibility to boost your conversions and revenue.",
+      "We engineer <strong>visually stunning</strong>, <strong>lightning-fast</strong>, and universally accessible user interfaces (using <strong>React/Next.js</strong>) to create a <strong>strong online presence</strong> and instantly build <strong>customer trust</strong>.",
     services: [
       {
-        title: "SEO-Optimized & Lightning-Fast Websites",
+        title: "Lightning-Fast Speed & Top Google Search Rankings",
         description:
-          "Building your custom application using the most advanced technology (Next.js) to ensure lightning-fast loading, top Google search rankings, and smooth user flow.",
+          "We engineer your site to load <strong>almost instantly</strong>, which directly boosts your <strong>Google SEO score</strong> and keeps users engaged, leading to <strong>higher conversions</strong> and revenue.",
+        icon: TrendingUp,
+      },
+      {
+        title: "Flawless Mobile Experience & Instant Credibility",
+        description:
+          "Your application will look <strong>professional</strong> and function <strong>perfectly on every device</strong>. A unified, modern design builds <strong>immediate trust</strong> with your visitors.",
         icon: Monitor,
       },
       {
-        title: "Flawless Mobile Experience & Accessibility",
+        title: "Future-Proof Reliability & Low Maintenance Cost",
         description:
-          "Your site will look and function perfectly on every device (Mobile-First approach). We guarantee a consistent, high-quality experience that captures every mobile visitor.",
-        icon: Monitor,
-      },
-      {
-        title: "Instant Credibility & Professional Branding",
-        description:
-          "We use a unified design approach (Tailwind CSS) to ensure every page looks polished, professional, and reflects your brand perfectly, building instant customer trust.",
-        icon: Monitor,
+          "We build the core of your interface using industry best practices (<strong>TypeScript</strong>), ensuring your application is <strong>stable</strong>, <strong>easy to scale</strong>, and requires <strong>less costly bug fixing</strong> down the line.",
+        icon: Lock,
       },
     ],
   },
 
   // ----------------------------------------------------------------------
-  // 2. SECURE DATA, CUSTOM FEATURES, AND INTEGRATIONS
+  // 2. SECURE BACKEND & DATA ARCHITECTURE
   // Focus: Security, Custom Tools, and Scalability
   // ----------------------------------------------------------------------
   {
-    categoryTitle: "Enterprise-Grade Security, Custom Tools & Integrations",
-    icon: PlugZap,
+    categoryTitle: "Secure & Scalable Core Backend Architecture",
+    icon: Database,
     description:
-      "We engineer the powerful, reliable core of your application, providing maximum data protection, complex business rules, and secure connections to other critical tools.",
+      "We engineer the <strong>powerful</strong>, <strong>reliable core</strong> of your application (<strong>Node.js/MongoDB</strong>), guaranteeing <strong>maximum data protection</strong>, fast processing of complex business rules, and <strong>limitless future scalability</strong>.",
     services: [
       {
-        title: "Custom Business Tools Built to Your Exact Needs",
+        title: "Scalable Database Architecture for Unlimited Growth",
         description:
-          "Creating the special functionality (like customer portals, custom calculators, or booking tools) you need. We build it to be fast, reliable, and integrate smoothly with your existing workflow.",
-        icon: PlugZap,
+          "We design your data structure to ensure your application can handle <strong>massive traffic spikes</strong> and <strong>future feature expansion</strong> without slowing down or requiring <strong>costly overhauls</strong>.",
+        icon: Database,
       },
       {
-        title: "Maximum Security & Data Protection",
+        title: "Enterprise-Grade Security & Data Protection",
         description:
-          "Implementing robust protection layers (secure logins, data encryption, compliance focus) to keep your sensitive business and customer information safe from threats.",
+          "We implement <strong>robust layers of protection</strong> (secure authentication, data encryption) to keep all <strong>sensitive business and customer information</strong> safe from threats.",
         icon: Lock,
       },
       {
-        title: "Scalable Database for Future Growth",
+        title: "Efficient, Custom Business Logic",
         description:
-          "Designing the perfect structure for your data so your application is always quick, reliable, and capable of handling future growth and high traffic without slowing down.",
-        icon: Database,
+          "Building the 'brain' of your application with <strong>fast</strong>, <strong>efficient technologies</strong> (<strong>Node.js</strong>) to handle <strong>complex processes</strong> (like calculations, payment processing, or reporting) <strong>quickly and reliably</strong>.",
+        icon: PlugZap,
       },
     ],
   },
 
   // ----------------------------------------------------------------------
-  // 3. START-TO-FINISH CUSTOM APPLICATION BUILDING
+  // 3. START-TO-FINISH CUSTOM APPLICATION BUILDING (FULL STACK)
   // Focus: Risk Reduction, Efficiency, and Guaranteed Delivery
   // ----------------------------------------------------------------------
   {
-    categoryTitle: "Complete, Risk-Free Custom Software Delivery",
+    categoryTitle: "Complete, Cohesive Custom Software Delivery",
     icon: Layers3,
     description:
-      "Our one-stop-shop service covers the entire development cycle, delivering a fully cohesive, robust, and scalable solution, ready to launch.",
+      "Our <strong>full-stack service</strong> provides a <strong>single point of accountability</strong> for your entire project, eliminating <strong>technical risk</strong> and ensuring a cohesive, <strong>highly efficient application</strong> that is managed <strong>seamlessly</strong> from concept to launch.",
     services: [
       {
-        title: "Risk-Free Planning & Guaranteed Project Success",
+        title: "Risk-Free Technical Roadmap & Planning",
         description:
-          "Before any code is written, we map out a clear plan, define the technology, and create a roadmap to eliminate risks and ensure your project launches on time and within budget.",
+          "Before we write any code, we map out a <strong>clear plan</strong>, define the <strong>full-stack architecture</strong>, and create a timeline to ensure your project launches <strong>on time and within budget</strong>.",
         icon: Layers3,
       },
       {
-        title: "One-Stop Shop for Your Custom Software Project",
+        title: "Streamlined Content Management (Headless CMS)",
         description:
-          "We handle every technical aspect of the build, from the front-end design to the secure database, ensuring a seamless, high-performing product that saves you time and coordination effort.",
-        icon: Layers3,
+          "Integrating modern tools like <strong>PayloadCMS</strong> gives your team <strong>full</strong>, <strong>easy control over website content</strong> without needing a developer, saving you time and giving you <strong>instant publishing capabilities</strong>.",
+        icon: Database,
+      },
+      {
+        title: "Efficient State Management for Complex Interfaces",
+        description:
+          "We expertly handle the <strong>complexity of large applications</strong>, ensuring <strong>smooth user interactions</strong>, <strong>fast transitions</strong>, and a <strong>responsive feel</strong> that keeps users engaged without frustration.",
+        icon: PlugZap,
       },
     ],
   },
 
   // ----------------------------------------------------------------------
-  // 4. LAUNCH, SPEED & RELIABLE HOSTING
+  // 4. LAUNCH, SPEED & RELIABLE HOSTING (DEVOPS)
   // Focus: Uptime, Zero Downtime, and Google Ranking
   // ----------------------------------------------------------------------
   {
-    categoryTitle: "Maximum Uptime, Automated Launch, and Fast Hosting",
+    categoryTitle: "Automated Deployment, Maximum Uptime & Fast Hosting",
     icon: CloudCog,
     description:
-      "We get your application online quickly and keep it running perfectly. We guarantee maximum speed, minimal downtime, and scalable hosting for any traffic spikes.",
+      "We handle the entire launch and hosting process, using modern platforms like <strong>Vercel</strong> to guarantee <strong>maximum uptime</strong>, <strong>seamless updates</strong>, and a <strong>scalable architecture</strong> ready for <strong>any traffic spike</strong>.",
     services: [
       {
         title: "Zero-Downtime Updates & Seamless Launch",
         description:
-          "Setting up automated systems (CI/CD) so that every fix or feature update is tested and deployed instantly, without any interruption or 'maintenance mode' for your customers.",
+          "We set up <strong>automated deployment systems</strong> (CI/CD via <strong>Vercel</strong>) so every update or fix is deployed <strong>instantly and seamlessly</strong>, without taking your application offline or <strong>interrupting users</strong>.",
         icon: CloudCog,
       },
       {
-        title: "Top Google Speed Scores & Higher Conversions",
+        title: "Scalable, High-Performance Hosting",
         description:
-          "We analyze and tune your code to achieve top speed scores and Core Web Vitals, which is essential for improving SEO and directly leading to better user retention.",
+          "Your application is hosted on <strong>robust infrastructure</strong> guaranteed to handle <strong>massive traffic spikes</strong>, maintain <strong>lightning-fast speed</strong>, and ensure a <strong>global presence</strong>.",
         icon: TrendingUp,
       },
       {
-        title: "24/7 Monitoring & Maximum Uptime Guarantee",
+        title: "Long-Term Code Review & Technical Consulting",
         description:
-          "Implementing systems that constantly monitor your application's health. We can catch and fix issues immediately, ensuring peak performance and maximum uptime around the clock.",
-        icon: Monitor,
+          "Providing <strong>expert review</strong> of existing codebases, <strong>performance audits</strong>, and <strong>long-term architectural advice</strong> to ensure your engineering team maintains <strong>efficiency and stability</strong> as the product scales.",
+        icon: Layers3,
       },
     ],
   },

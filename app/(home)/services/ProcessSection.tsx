@@ -100,7 +100,11 @@ const ProcessSection = () => {
                 iconName={item.icon}
               >
                 <h3 className="text-3xl font-bold text-brand">{item.title}</h3>
-                <p className="text-gray-300 xl:text-lg">{item.description}</p>
+                <p className="text-gray-300 xl:text-lg">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                </p>
               </ProcessCard>
             </div>
           ))}
