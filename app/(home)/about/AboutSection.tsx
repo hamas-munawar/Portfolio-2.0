@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
       <div className="flex flex-col gap-6">
         <h2 className="text-4xl font-bold">
           Hi, I&apos;m <span className="text-brand">Hamas Munawar.</span>
@@ -20,7 +20,7 @@ const AboutSection = () => {
           </p>
         </div>
       </div>
-      <div className="min-h-[400px] flex items-center justify-center">
+      <div className="min-h-[300px] flex items-center justify-center">
         <Image
           src="/personal.png"
           width={300}

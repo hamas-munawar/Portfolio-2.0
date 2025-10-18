@@ -1,11 +1,11 @@
 "use client";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import { FaGithub, FaLink } from "react-icons/fa";
 
-import { PROJECTS } from '@/app/data/Projects';
+import { PROJECTS } from "@/app/data/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +16,7 @@ const ProjectDetailPage = () => {
 
   if (project)
     return (
-      <section className="min-h-screen w-full hover:cursor-default select-none py-8 font-roboto flex flex-col gap-8 lg:px-50">
+      <section className="min-h-screen w-full hover:cursor-default select-none py-8 font-roboto flex flex-col gap-8 lg:px-50 pt-16">
         <div className="flex flex-col gap-8 mt-8">
           <header className="slide-up grid grid-cols-[1fr_auto] justify-between gap-2 sm:gap-4 md:items-center">
             <h1 className="font-anton text-5xl md:text-6xl lg:text-7xl">

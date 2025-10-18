@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen grid place-content-center gap-16 my-8 md:my-10 xl:px-20"
+      className="min-h-screen grid place-content-center gap-16 my-8 md:my-10 xl:px-20 pt-16"
     >
       <main className="slide-up flex flex-col gap-16">
         <section className="text-center">

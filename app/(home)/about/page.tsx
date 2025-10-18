@@ -9,9 +9,9 @@ const AboutPage = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen grid place-content-center gap-16 my-8 md:my-10 xl:px-20"
+      className="min-h-screen grid place-content-center gap-16 my-8 md:my-10 xl:px-20 pt-16"
     >
-      <main className="slide-up flex flex-col gap-16 pt-16 md:pt-0">
+      <main className="slide-up flex flex-col gap-16">
         <section className="text-center">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton font-bold mb-4 animate-fade-in-up">
             <span className="text-brand">About</span> Me
