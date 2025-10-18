@@ -1,10 +1,12 @@
 "use client";
-import gsap from 'gsap';
-import Link from 'next/link';
-import { useState } from 'react';
-import { MdArrowOutward } from 'react-icons/md';
+import gsap from "gsap";
+import Link from "next/link";
+import { useState } from "react";
+import { MdArrowOutward } from "react-icons/md";
 
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
+
+import BackButton from "./BackButton";
 
 const socialLinks = [
   { label: "Github", href: "https://github.com/hamas-munawar" },
@@ -42,8 +44,9 @@ const Navbar = () => {
   }, [menu]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 p-4 z-20">
-      <nav className="flex justify-end max-w-screen mx-auto">
+    <header className="fixed top-0 left-0 right-0 p-8 z-20">
+      <nav className="flex justify-between max-w-screen mx-auto">
+        <BackButton />
         <button
           onClick={() => setMenu(!menu)}
           className="relative w-10 h-10 group hover:cursor-pointer z-[110] outline-none"
